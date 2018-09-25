@@ -8,13 +8,11 @@ public class CalculatorTest {
 
     @Before
     public void before(){
-        calculator = new Calculator(10, 2);
+        calculator = new Calculator();
     }
 
     @Test
     public void canAdd(){
-//        Calculator newCalcultor = new Calculator(2, 10);
-        // below variables get overwritten by @before calculator
         int addedValue = calculator.add(10, 2);
         assertEquals(12, addedValue);
     }
@@ -33,7 +31,7 @@ public class CalculatorTest {
 
     @Test
     public void canDivide(){
-        int addedValue = calculator.divide(10, 2);
-        assertEquals(5, addedValue);
+        double addedValue = calculator.divide(3, 2);
+        assertEquals(1.5, addedValue, 0.01);
     }
 }
