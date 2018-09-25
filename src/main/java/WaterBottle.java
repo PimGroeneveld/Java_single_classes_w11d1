@@ -1,8 +1,8 @@
 public class WaterBottle {
     private int volume;
 
-    public WaterBottle(int volume){
-        this.volume = volume;
+    public WaterBottle(){
+        this.volume = 100;
     }
 
     public int getVolume() {
@@ -11,16 +11,16 @@ public class WaterBottle {
 
     public int takeSip(){
         this.volume -= 10;
-        return volume;
+        return this.volume;
     }
 
     public int emptyBottle(){
         this.volume = 0;
-        return volume;
+        return this.volume;
     }
 
     public int fillBottle(){
         this.volume = 100;
-        return volume;
+        return this.volume;
     }
 }
